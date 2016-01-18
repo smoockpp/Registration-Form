@@ -1,0 +1,322 @@
+/*******************************
+****     Base style       ******
+*******************************/
+
+input, input:before, input:after, button {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+  color: #2d3945;
+  font-size: 1em;
+
+}
+
+form {
+  max-width: 290px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 8px;
+
+}
+
+h2 {
+  padding: 18px 0 18px 0;
+  background: #2d3945;
+  text-align: center;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.25em;
+  margin-bottom: 0;
+}
+
+p {
+  text-align: center;
+  font-weight: 300;
+  margin-top: 5px;
+  margin-bottom: 3px;
+  padding-bottom: 30px;
+  border-bottom: 4px solid #2d3945;
+}
+
+
+
+/*******************************
+****     Layout style     ******
+*******************************/
+
+fieldset {
+  border: none;
+  padding: 0;
+  width: 100%;
+  margin: 0 auto 30px;
+}
+
+legend {
+  font-size: 1.25em;
+  font-weight: bold;
+  padding-top: 50px;
+  border-top: 2px solid #2d3945;
+  width: 100%;
+}
+
+.number {
+  background-color: #2d3945;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 0;
+}
+
+
+
+
+
+.fs1 > label {
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  font-weight: 300;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+
+  background: rgba(0,0,0,0.1);
+  border: 2px solid rgba(0,0,0,0.01);
+  border-radius: 3px;
+  font-size: 1em;
+  height: 50px;
+  margin: 0;
+  width: 290px;
+  text-indent: 10px;
+  margin-top: 10px;
+  padding: 0;
+}
+
+textarea {
+  -webkit-transition: ease-in-out, border .5s ease-in-out;
+  -moz-transition: ease-in-out, border .5s ease-in-out;
+  -o-transition: ease-in-out, border .5s ease-in-out;
+  transition: ease-in-out, border .5s ease-in-out;
+  width: 100%;
+  height: 100px;
+}
+
+select {
+  width: 290px;
+  height: 50px;
+  border: 2px solid rgba(0,0,0,0.01);
+  border-radius: 3px;
+  margin-top: 10px;
+  outline: 0;
+  background: rgba(0,0,0,0.1) url('../img/icn-select.png') no-repeat 92% 50%;
+  background-size: 12px 12px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[id="zipcode"] {
+  width: 150px;
+  margin-bottom: 25px
+}
+
+
+/* Styling layout on focus and adding transition */
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+textarea:hover,
+select:focus {
+  
+  border: 2px solid #2d3945;
+}
+
+/* Styling required */
+
+input[placeholder="Required"] {
+  color: #a8adb2;
+  text-indent: 210px;
+  font-style: italic;
+  font-size: 12px;
+  height: 50px;
+}
+
+input[placeholder="Required"]:focus {
+  text-indent: 10px;
+
+}
+
+
+/* Styling checkbox and radio buttons */
+
+input[type="checkbox"],
+input[type="radio"] {
+  display:none;
+}
+
+input[id="html_news"] + label span,
+input[id="css_news"] + label span,
+input[id="js_news"] + label span,
+input[id="jquery_topics"] + label span,
+input[id="angular_topics"] + label span,
+input[id="php_topics"] + label span {
+  -webkit-transition: ease-in-out, background .5s ease-in-out;
+  -moz-transition: ease-in-out, background .5s ease-in-out;
+  -o-transition: ease-in-out, background .5s ease-in-out;
+  transition: ease-in-out, background .5s ease-in-out;
+  display:inline-block;
+  width:19px;
+  height:19px;
+  margin:-1px 4px 0 0;
+  vertical-align:middle;
+  background:url('../img/icn-unchecked.png') left top no-repeat;
+  cursor:pointer;
+}
+
+input[id="html_news"]:checked + label span,
+input[id="css_news"]:checked + label span,
+input[id="js_news"]:checked + label span,
+input[id="jquery_topics"]:checked + label span,
+input[id="angular_topics"]:checked + label span,
+input[id="php_topics"]:checked + label span {
+    background:url('../img/icn-check.png') left top no-repeat;
+}
+
+input[id="html_format"] + label span,
+input[id="plain_text"] + label span {
+    -webkit-transition: ease-in-out, background .5s ease-in-out;
+    -moz-transition: ease-in-out, background .5s ease-in-out;
+    -o-transition: ease-in-out, background .5s ease-in-out;
+    transition: ease-in-out, background .5s ease-in-out;
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url('../img/icn-unchecked-round.png') left top no-repeat;
+    cursor:pointer;
+}
+
+input[id="html_format"]:checked + label span,
+input[id="plain_text"]:checked + label span {
+    background:url('../img/icn-check-round.png') left top no-repeat;
+}
+
+
+/* Styling the labels for second fieldset */
+
+
+.fs2 input[type="checkbox"] {
+  margin: 0;
+}
+
+.fs2 > label {
+  display: block;
+  font-weight: 300;
+}
+
+label.info {
+  margin-top: 30px;
+}
+
+.fs2 > label[for="html_news"],
+.fs2 > label[for="html_format"],
+.fs2 > label[for="jquery_topics"] {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+
+button {
+  -webkit-transition: ease-in-out, background-color .5s ease-in-out;
+  -moz-transition: ease-in-out, background-color .5s ease-in-out;
+  -o-transition: ease-in-out, background-color .5s ease-in-out;
+  transition: ease-in-out, background-color .5s ease-in-out;
+  padding: 18px 39px 18px 39px;
+  border: none;
+  color: #FFF;
+  background-color: #4ebbb5;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 3px;
+  width: 294px;
+  margin: 30px auto;
+}
+
+button:hover {
+  -webkit-transition: background-color linear .2s;
+    -moz-transition: background-color linear .2s;
+    -o-transition: background-color linear .2s;
+    transition: background-color linear .2s;
+  background-color: #2d3945;
+}
+
+.copyright {
+  color: #9da3a8;
+  font-style: italic;
+  border-bottom: none;
+  margin-bottom: 200px;
+  font-size: 0.75em;
+}
+
+
+/*******************************************
+****    Media Querie for desktop      ******
+*******************************************/
+
+@media (min-width: 1024px) {
+  
+  form {
+    max-width: 600px;
+  }
+
+  input[placeholder="Required"] {
+    text-indent: 350px;
+  }
+  
+
+  .fs1 > label {
+    display: inline-block;
+    width: 150px;
+  }
+
+  .fs1 > input,
+  .fs1 > select {
+    width: 445px;
+  }
+
+  input[id="zipcode"] {
+    width: 150px;
+  }
+
+  button {
+    width: 604px;
+  }
+
+}
